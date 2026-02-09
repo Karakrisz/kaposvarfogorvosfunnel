@@ -34,7 +34,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'canonical', href: 'https://csempe.burkololapoutlet.hu/' },
+        { rel: 'canonical', href: 'implantprogram.kaposvarfogorvos.hu' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
         {
@@ -48,7 +48,7 @@ export default defineNuxtConfig({
   modules: ['@nuxt/image', '@nuxtjs/sitemap'],
 
   site: {
-    url: 'https://sos.letavillanyszereles.hu/',
+    url: 'implantprogram.kaposvarfogorvos.hu',
     trailingSlash: true,
   },
 

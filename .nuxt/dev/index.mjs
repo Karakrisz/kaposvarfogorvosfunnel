@@ -184,7 +184,7 @@ const _nYd4LTqpmZ = (function(nitro) {
 
 const rootDir = "/Applications/XAMPP/xamppfiles/htdocs/kaposvarfogorvosfunnel";
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Modern fogászati kezelések Kaposváron: implantátumok, fogpótlások, esztétikai fogászat, gyökérkezelés, fogkő-eltávolítás, fogfehérítés. Időpontkérés gyorsan és egyszerűen."},{"name":"format-detection","content":"telephone=no"},{"hid":"robots","name":"robots","content":"index, follow"},{"http-equiv":"Content-Security-Policy","content":"\n            default-src 'self' https: data:;\n            img-src 'self' https: http: data:;\n            font-src 'self' https: data:;\n            style-src 'self' https: 'unsafe-inline';\n            script-src 'self' https: 'unsafe-inline' 'unsafe-eval';\n          "}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"canonical","href":"https://csempe.burkololapoutlet.hu/"},{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"}],"style":[],"script":[],"noscript":[],"title":"Kaposvár Fogászat - Időpontfoglalás | Modern fogászati kezelések","htmlAttrs":{"lang":"hu"}};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Modern fogászati kezelések Kaposváron: implantátumok, fogpótlások, esztétikai fogászat, gyökérkezelés, fogkő-eltávolítás, fogfehérítés. Időpontkérés gyorsan és egyszerűen."},{"name":"format-detection","content":"telephone=no"},{"hid":"robots","name":"robots","content":"index, follow"},{"http-equiv":"Content-Security-Policy","content":"\n            default-src 'self' https: data:;\n            img-src 'self' https: http: data:;\n            font-src 'self' https: data:;\n            style-src 'self' https: 'unsafe-inline';\n            script-src 'self' https: 'unsafe-inline' 'unsafe-eval';\n          "}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"canonical","href":"implantprogram.kaposvarfogorvos.hu"},{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"}],"style":[],"script":[],"noscript":[],"title":"Kaposvár Fogászat - Időpontfoglalás | Modern fogászati kezelések","htmlAttrs":{"lang":"hu"}};
 
 const appRootTag = "div";
 
@@ -411,7 +411,7 @@ const _inlineRuntimeConfig = {
       {
         "_priority": -3,
         "_context": "nuxt-site-config:config",
-        "url": "https://sos.letavillanyszereles.hu/",
+        "url": "implantprogram.kaposvarfogorvos.hu",
         "trailingSlash": true
       }
     ],
