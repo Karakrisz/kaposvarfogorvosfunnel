@@ -10,7 +10,7 @@ export const useCallConversion = () => {
 
     if (window.gtag) {
       window.gtag('event', 'conversion', {
-        send_to: 'AW-17958244663/TvUdCOjRn_obELeilPNC',
+        send_to: 'AW-17958244663/M9yeCK_rr_obELeilPNC',
         event_callback: callback,
       })
       return false
@@ -22,3 +22,5 @@ export const useCallConversion = () => {
 
   return { reportCallConversion }
 }
+
+
