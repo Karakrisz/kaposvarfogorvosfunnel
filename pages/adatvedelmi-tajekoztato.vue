@@ -17,11 +17,11 @@ useHead({
         <div class="policy-content">
           <h1 class="policy-title">Adatkezelési Tájékoztató</h1>
 
-          <p class="policy-date">Elfogadás dátuma: 2026.01.07</p>
+          <p class="policy-date">Elfogadás dátuma: 2026.02.17</p>
 
           <div class="policy-section">
             <h2 class="policy-h2">1. ADATKEZELŐ</h2>
-            <p>App@szatmarnapelem.mailconnect.hu</p>
+            <p>App@implantprogram.mailconnect.hu</p>
           </div>
 
           <div class="policy-section">
@@ -120,7 +120,7 @@ useHead({
             </ul>
             <p>
               Kérjük, hogy az Önt megillető jogok gyakorlása érdekében a
-              <strong>App@szatmarnapelem.mailconnect.hu </strong> e-mail címre
+              <strong>App@implantprogram.mailconnect.hu </strong> e-mail címre
               küldött üzenettel keresse meg az Adatkezelőt.
             </p>
           </div>

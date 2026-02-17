@@ -64,10 +64,12 @@ const submitForm = async (event) => {
 
   try {
     const webhookUrl =
-      'https://services.leadconnectorhq.com/hooks/bsv1VGpQFCUeEBabknKX/webhook-trigger/30d2cccd-c034-4fe4-94e9-28e75927e7db'
+      'https://services.leadconnectorhq.com/hooks/iA82crKH3NH5LKewbtSJ/webhook-trigger/dd73342c-62c1-4128-964b-a68c30306c45'
 
     const { gclid, wbraid, gbraid } = getClickIds()
     const serviceName = getServiceDisplayName(formData.value.serviceType)
+    const issueName = getIssueDisplayName(formData.value.roofType)
+    const urgencyName = getUrgencyDisplayName(formData.value.urgency)
 
     const payload = {
       name: formData.value.name,
@@ -85,8 +87,8 @@ const submitForm = async (event) => {
       form_type: 'dental_appointment_request',
       submission_date: new Date().toISOString(),
       custom_field_1: serviceName,
-      custom_field_2: formData.value.roofType,
-      custom_field_3: formData.value.urgency,
+      custom_field_2: issueName,
+      custom_field_3: urgencyName,
     }
 
     const response = await fetch(webhookUrl, {
@@ -128,16 +130,40 @@ const submitForm = async (event) => {
 
 const getServiceDisplayName = (serviceValue) => {
   const serviceMap = {
-    hazasitalis: 'Fogászati implantátum / fogbeültetés',
-    nagyobb: 'Cirkónium vagy porcelán fogpótlás (korona/híd)',
-    gazdasagi: 'Esztétikai fogászat (héj, mosolytervezés)',
-    korszerusites: 'Gyökérkezelés (endodoncia)',
-    pelus: 'Fogtömés / szuvas fog ellátása',
-    energiatarolas: 'Fogfehérítés',
-    hibaelhárítás: 'Szájsebészet / csontpótlás',
-    egyéb: 'Egyéb fogászati kezelés',
+    implantatum: 'Fogászati implantátum / fogbeültetés',
+    korona_hid: 'Korona / híd (cirkónium vagy porcelán)',
+    esztetikai: 'Esztétikai fogászat (héj, mosolytervezés)',
+    gyokerkezeles: 'Gyökérkezelés (endodoncia)',
+    fogtomes: 'Fogtömés / szuvas fog ellátása',
+    fogfeherites: 'Fogfehérítés',
+    szajsebeszet_csontpotlas: 'Szájsebészet / csontpótlás',
+    fogszabalyozas: 'Fogszabályozás',
+    gyermekfogaszat: 'Gyermekfogászat',
+    fogko_eltavolitas: 'Fogkő eltávolítás / szájhigiénia',
+    egyeb: 'Egyéb fogászati kezelés',
   }
   return serviceMap[serviceValue] || serviceValue
+}
+
+const getIssueDisplayName = (issueValue) => {
+  const issueMap = {
+    fajdalom: 'Fájdalom / érzékenység',
+    letort_szuvas: 'Letört fog / szuvasodás',
+    foghiany: 'Foghiány / fogpótlás igénye',
+    esztetika: 'Esztétikai igény (mosoly)',
+    inyproblema: 'Ínyprobléma / vérzés',
+    egyeb: 'Egyéb',
+  }
+  return issueMap[issueValue] || issueValue
+}
+
+const getUrgencyDisplayName = (urgencyValue) => {
+  const urgencyMap = {
+    sürgős: 'Minél hamarabb (fájdalom/sürgős)',
+    normál: '1-2 héten belül',
+    tervezett: 'Később, tervezetten',
+  }
+  return urgencyMap[urgencyValue] || urgencyValue
 }
 
 const initPage = () => {
@@ -636,22 +662,27 @@ onMounted(() => {
                   :disabled="isSubmitting"
                 >
                   <option value="">Válasszon kezelést...</option>
-                  <option value="hazasitalis">
+                  <option value="implantatum">
                     Fogászati implantátum / fogbeültetés
                   </option>
-                  <option value="nagyobb">
+                  <option value="korona_hid">
                     Korona / híd (cirkónium vagy porcelán)
                   </option>
-                  <option value="gazdasagi">
+                  <option value="esztetikai">
                     Esztétikai fogászat (héj, mosolytervezés)
                   </option>
-                  <option value="korszerusites">Gyökérkezelés</option>
-                  <option value="pelus">Fogtömés</option>
-                  <option value="energiatarolas">Fogfehérítés</option>
-                  <option value="hibaelhárítás">
+                  <option value="gyokerkezeles">Gyökérkezelés</option>
+                  <option value="fogtomes">Fogtömés</option>
+                  <option value="fogfeherites">Fogfehérítés</option>
+                  <option value="szajsebeszet_csontpotlas">
                     Szájsebészet / csontpótlás
                   </option>
-                  <option value="egyéb">Egyéb fogászati ellátás</option>
+                  <option value="fogszabalyozas">Fogszabályozás</option>
+                  <option value="gyermekfogaszat">Gyermekfogászat</option>
+                  <option value="fogko_eltavolitas">
+                    Fogkő eltávolítás / szájhigiénia
+                  </option>
+                  <option value="egyeb">Egyéb fogászati ellátás</option>
                 </select>
               </div>
 
@@ -666,10 +697,12 @@ onMounted(() => {
                   :disabled="isSubmitting"
                 >
                   <option value="">Válasszon...</option>
-                  <option value="tégla">Fájdalom / érzékenység</option>
-                  <option value="lemez">Letört fog / szuvasodás</option>
-                  <option value="lapos">Foghiány / fogpótlás igénye</option>
-                  <option value="egyéb">Egyéb</option>
+                  <option value="fajdalom">Fájdalom / érzékenység</option>
+                  <option value="letort_szuvas">Letört fog / szuvasodás</option>
+                  <option value="foghiany">Foghiány / fogpótlás igénye</option>
+                  <option value="esztetika">Esztétikai igény (mosoly)</option>
+                  <option value="inyproblema">Ínyprobléma / vérzés</option>
+                  <option value="egyeb">Egyéb</option>
                 </select>
               </div>
 
