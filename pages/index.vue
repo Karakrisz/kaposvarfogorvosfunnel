@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useGtagConversion } from '~/composables/useGtagConversion'
+import { useCallConversion } from '~/composables/useCallConversion'
 
 useHead({
   title: 'Kaposvár Fogászat - Időpontfoglalás | Modern fogászati kezelések',
@@ -164,6 +165,11 @@ const getUrgencyDisplayName = (urgencyValue) => {
     tervezett: 'Később, tervezetten',
   }
   return urgencyMap[urgencyValue] || urgencyValue
+}
+
+const handlePhoneClick = (event) => {
+  const { reportCallConversion } = useCallConversion()
+  reportCallConversion(event.currentTarget?.getAttribute('href'))
 }
 
 const initPage = () => {
@@ -627,7 +633,11 @@ onMounted(() => {
               Beszéljen Dr. Simon Tiborral – gyors egyeztetés, nyugodt
               tájékoztatás
             </p>
-            <a href="tel:+36305490689" class="phone-button">
+            <a
+              href="tel:+36305490689"
+              class="phone-button"
+              @click.prevent="handlePhoneClick"
+            >
               <span class="phone-icon">📞</span>
               <span class="phone-number">+36 (30) 549-0689</span>
             </a>
