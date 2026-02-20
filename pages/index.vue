@@ -227,40 +227,6 @@ onMounted(() => {
           </div>
         </div>
 
-        <!-- 3 KIEMELT ÉRVELÉS -->
-        <div class="benefits-grid">
-          <div class="benefit-card">
-            <h3>🦷 Teljes körű modern fogászat egy helyen</h3>
-            <p>
-              <strong
-                >A legtöbb problémára van kíméletes, korszerű megoldás.</strong
-              >
-              Implantátumok, cirkónium és porcelán fogpótlások, koronák és
-              hidak, csontpótlás, szájsebészet, fogtömés, gyökérkezelés,
-              fogkő-eltávolítás, fogfehérítés, fogszabályozás, gyermekfogászat
-              és fogászati radiológia.
-            </p>
-          </div>
-          <div class="benefit-card">
-            <h3>🛡️ Biztonság, fájdalomcsillapítás, kiszámíthatóság</h3>
-            <p>
-              <strong
-                >Átlátható tervvel és érthető kommunikációval haladunk.</strong
-              >
-              Megbeszéljük a lehetőségeket, a várható lépéseket és a
-              kockázatokat is. Célunk, hogy a kezelés közben is nyugodt legyen,
-              és pontosan tudja, mi miért történik.
-            </p>
-          </div>
-          <div class="benefit-card">
-            <h3>✅ Időpontkérés 1 perc alatt</h3>
-            <p>
-              <strong>Nem kell hosszú telefonálás vagy bizonytalanság.</strong>
-              Írja meg röviden, miben segíthetünk, és visszahívjuk időponttal,
-              kérdésekkel, a következő lépések tisztázásával.
-            </p>
-          </div>
-        </div>
 
         <!-- BIZALOM MODUL -->
         <div class="trust-module">
@@ -345,46 +311,6 @@ onMounted(() => {
           </div>
         </div>
 
-        <!-- MIT TARTALMAZ -->
-        <div class="includes-section">
-          <h2 class="section-heading">
-            Mit tartalmaz az ellátás és a szervezés?
-          </h2>
-          <div class="includes-grid">
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <strong>Állapotfelmérés és konzultáció</strong>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <strong>Átlátható kezelési terv</strong>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <strong>Időpont-egyeztetés és emlékeztetők</strong>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <strong>Szükség esetén radiológiai vizsgálat</strong>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <strong>Modern, kíméletes kezelési eljárások</strong>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <strong>Részletes otthoni teendők a gyógyuláshoz</strong>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <strong>Kontroll és utókövetés igény szerint</strong>
-            </div>
-            <div class="include-item">
-              <span class="include-check">✓</span>
-              <strong>Garanciális tudnivalók a fogpótlásoknál</strong>
-            </div>
-          </div>
-        </div>
 
         <!-- GYIK SZEKCIÓ -->
         <div class="faq-section">
@@ -1484,6 +1410,7 @@ body > footer {
 /* ========== FAQ SECTION ========== */
 .faq-section {
   margin: 3em 0;
+  display: none;
 }
 
 .faq-list {
