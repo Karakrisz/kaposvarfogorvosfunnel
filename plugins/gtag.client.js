@@ -12,13 +12,10 @@ export default defineNuxtPlugin(() => {
     window.gtag = gtag
 
     gtag('js', new Date())
+    gtag('config', 'G-DRCLT739TT')
     gtag('config', 'AW-17958244663')
     gtag('config', 'AW-17958244663/Hyj2CIeI4vsbELeilPNC', {
-      'phone_conversion_number': '+36 30 549 0689'
+      phone_conversion_number: '+36 30 549 0689',
     })
   }
 })
-
-
-
-
